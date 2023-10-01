@@ -1,4 +1,4 @@
-import { hello } from "./map.js";
+import { Map } from "./map.js";
 
-console.log("Привет, Мир!");
-console.log(hello);
+const canvas = document.querySelector(".canvas");
+const context = canvas.getContext("2d");
