@@ -1,4 +1,4 @@
 Русский:
-1. Создать карту(невыполнено)
+1. Создать карту(выполнено)
 English:
-1. Create a card (unfulfilled)
+1. Create a card (done)
