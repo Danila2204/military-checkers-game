@@ -1,3 +1,5 @@
+import {Weapon} from "./weapons.js";
+
 export function Unit(type, HP, protection, review, imageSRC, positions, context) {
     const unit = {type, HP, protection, review, imageSRC};
 
