@@ -39,26 +39,24 @@ export function GameObjectMethods() {
             let positionX = 0;
             let positionY = 0;
     
-            this.image = new Image();
+            this.image = new Image(this.width, this.height);
             this.image.src = this.imageSRC;
     
             for (let i = 0; i < this.positions.length; i++) {
                 if (this.positions[i].localPositionX === localPositionX && this.positions[i].localPositionY === localPositionY) {
-                    this.globalPositionX = position.globalPositionX;
-                    this.globalPositionY = position.globalPositionY;
+                    this.globalPositionX = this.positions[i].globalPositionX;
+                    this.globalPositionY = this.positions[i].globalPositionY;
                 }
             }
     
             this.context.rotate(this.deg * corner);
-    
-            console.log(this.imageSRC);
-            if (this.imageSRC == true) {
-                console.log("imageSRC = true");
+
+            if (this.imageSRC) {
                 this.image.onload = () => {
-                    this.context.drawImage(image, positionX, positionY);
-                    console.log("onload");
+                    this.context.drawImage(this.image, positionX, positionY);
                 }
             } else {
+                console.log("false");
                 this.context.fillStyle = "#f00";
                 this.context.fillRect(positionX, positionY, this.width, this.height);
             }

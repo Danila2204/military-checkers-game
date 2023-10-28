@@ -1,4 +1,6 @@
 Русский:
 1. Создать карту(выполнено)
+2. Создать абстрактный класс для боевых единиц(выполнено)
 English:
 1. Create a card (done)
+2. Create an abstract class for combat units (completed)

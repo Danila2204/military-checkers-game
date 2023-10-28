@@ -8,12 +8,12 @@ class Review {
     }
 }
 
-export function Unit(context, name, HP, review, positions, imageSRC) {
+export function Unit(context, name, HP, review, positions, imageSRC, width, height) {
     let reviewPositions = [];
     const unit = {name, HP, review, reviewPositions};
 
     return {
-        ...new GameObject(context, positions, imageSRC),
+        ...new GameObject(context, positions, imageSRC, width, height),
         ...GameObjectMethods(),
         ...unit,
         setReview(width, height) {
